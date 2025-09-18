@@ -1,60 +1,52 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Star, ArrowRight, Sparkles } from "lucide-react";
+import { Check, Star } from "lucide-react";
 
 const pricingPlans = [
   {
-    name: "Professional",
+    name: "Direct Product",
     price: 250,
-    description: "Perfect for growing businesses",
+    description: "Perfect for small businesses and startups",
     features: [
-      "OPSEC+ Hardware Unit",
-      "OpenPLC Pre-configured", 
-      "Advanced Security Suite",
+      "Opsec+ Hardware Unit",
+      "OpenPLC Pre-configured",
+      "Basic Security Package",
       "Web Dashboard Access",
-      "Priority Email Support",
-      "1 Year Premium Warranty"
+      "Email Support",
+      "1 Year Warranty"
     ],
-    popular: false,
-    gradient: "from-brand-blue/20 to-brand-green/20"
+    popular: false
   },
   {
-    name: "Enterprise",
+    name: "Product + Service",
     price: 500,
-    description: "Complete solution with white-glove service",
+    description: "Comprehensive solution with ongoing support",
     features: [
-      "Everything in Professional",
-      "White-Glove Installation",
-      "Custom Configuration & Training",
-      "24/7 SOC Monitoring",
-      "Dedicated Account Manager", 
-      "Remote Maintenance & Updates",
-      "Advanced Analytics Dashboard",
-      "2 Year Enterprise Warranty"
+      "Everything in Direct Product",
+      "Professional Installation",
+      "Custom Configuration",
+      "24/7 Security Monitoring",
+      "Priority Phone Support",
+      "Remote Maintenance",
+      "Advanced Analytics",
+      "2 Year Warranty"
     ],
-    popular: true,
-    gradient: "from-brand-red/20 to-brand-gold/20"
+    popular: true
   }
 ];
 
 const PricingSection = () => {
   return (
-    <section className="py-32 bg-gradient-to-b from-background via-secondary/30 to-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-dot-pattern opacity-[0.02]"></div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-20 animate-fade-in">
-          <Badge className="mb-6 bg-brand-gold/20 text-brand-gold border-brand-gold/30 text-sm px-6 py-3">
-            <Sparkles className="w-4 h-4 mr-2" />
-            Enterprise Pricing
-          </Badge>
-          <h2 className="text-display-lg lg:text-display-xl font-bold text-brand-dark mb-8 tracking-tight">
-            Transparent <span className="text-gradient bg-gradient-to-r from-brand-red via-brand-gold to-brand-green bg-clip-text text-transparent">Enterprise Pricing</span>
+    <section className="py-24 bg-gradient-to-b from-background to-secondary/30">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl lg:text-5xl font-bold text-brand-dark mb-6">
+            Simple, <span className="text-brand-red">Transparent Pricing</span>
           </h2>
-          <p className="text-xl lg:text-2xl text-brand-gray-light max-w-4xl mx-auto font-medium leading-relaxed">
-            Choose the perfect package for your automation needs. Both options deliver enterprise-grade 
-            security at a fraction of traditional PLC costs with guaranteed ROI.
+          <p className="text-xl text-brand-gray max-w-3xl mx-auto">
+            Choose the package that fits your automation needs. Both options include 
+            enterprise-grade security at a fraction of traditional PLC costs.
           </p>
         </div>
 

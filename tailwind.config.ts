@@ -60,31 +60,10 @@ export default {
         brand: {
           red: "hsl(var(--brand-red))",
           "red-light": "hsl(var(--brand-red-light))",
-          "red-dark": "hsl(var(--brand-red-dark))",
           dark: "hsl(var(--brand-dark))",
           gray: "hsl(var(--brand-gray))",
-          "gray-light": "hsl(var(--brand-gray-light))",
           green: "hsl(var(--brand-green))",
-          "green-light": "hsl(var(--brand-green-light))",
-          blue: "hsl(var(--brand-blue))",
-          gold: "hsl(var(--brand-gold))",
         },
-      },
-      fontFamily: {
-        display: ["var(--font-display)"],
-        body: ["var(--font-body)"],
-      },
-      fontSize: {
-        "display-2xl": ["4.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
-        "display-xl": ["3.75rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
-        "display-lg": ["3rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
-        "display-md": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
-        "display-sm": ["1.875rem", { lineHeight: "1.3" }],
-      },
-      spacing: {
-        "18": "4.5rem",
-        "88": "22rem",
-        "128": "32rem",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -93,57 +72,45 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
         "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "slide-up": {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        "slide-up": {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
         "scale-in": {
-          "0%": { opacity: "0", transform: "scale(0.9)" },
+          "0%": { opacity: "0", transform: "scale(0.95)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 30px hsl(var(--brand-green) / 0.3)" },
-          "50%": { boxShadow: "0 0 60px hsl(var(--brand-green) / 0.6)" },
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        "glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--brand-red) / 0.5)" },
-          "50%": { boxShadow: "0 0 40px hsl(var(--brand-red) / 0.8)" },
-        },
-        "shimmer": {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
-        "bounce-gentle": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-5px)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--brand-green) / 0.2)" },
+          "50%": { boxShadow: "0 0 40px hsl(var(--brand-green) / 0.4)" },
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.3s ease-out",
-        "accordion-up": "accordion-up 0.3s ease-out",
-        "fade-in": "fade-in 0.8s ease-out",
-        "slide-up": "slide-up 0.8s ease-out",
-        "scale-in": "scale-in 0.6s ease-out",
-        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
-        "float": "float 4s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite alternate",
-        "shimmer": "shimmer 2s linear infinite",
-        "bounce-gentle": "bounce-gentle 2s ease-in-out infinite",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.6s ease-out",
+        "slide-up": "slide-up 0.6s ease-out",
+        "scale-in": "scale-in 0.5s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
     },
   },
