@@ -36,12 +36,14 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 355 85% 45%;
 
-    /* Brand Colors */
+  /* Brand Colors */
     --brand-red: 355 85% 45%;
     --brand-red-light: 355 85% 55%;
     --brand-dark: 220 13% 13%;
     --brand-gray: 220 9% 46%;
     --brand-green: 142 77% 33%;
+  /* Hero backdrop hex #171E22 translated to HSL(203, 23%, 12%) */
+  --brand-hero: 203 23% 12%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--brand-red)), hsl(var(--brand-red-light)));
@@ -126,6 +128,7 @@ All colors MUST be HSL.
   }
 
   body {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     @apply bg-background text-foreground;
   }
 }

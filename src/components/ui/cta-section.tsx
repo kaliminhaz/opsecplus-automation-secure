@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { LeadFormButton } from "@/components/ui/lead-form";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Shield, Clock, CheckCircle } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-brand-red to-brand-red-light">
+  <section className="py-20 md:py-24 bg-gradient-to-br from-brand-red to-brand-red-light">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 animate-fade-in">
@@ -34,25 +35,23 @@ const CTASection = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
-            <Button 
-              size="lg" 
+            <LeadFormButton 
               className="bg-white text-brand-red hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-lg"
+              source="cta"
             >
               Start Your Free Consultation
               <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            </LeadFormButton>
             <Button 
               variant="outline" 
               size="lg"
-              className="border-white/30 text-white hover:bg-white/10"
+              className="text-white border-white/50 bg-white/10 hover:bg-white/20 hover:border-white/60 shadow-sm"
             >
               Download Datasheet
             </Button>
           </div>
 
-          <p className="mt-8 text-sm opacity-75">
-            No long-term contracts • 30-day money-back guarantee • Free technical support
-          </p>
+          {/* Removed guarantee/support line as requested */}
         </div>
       </div>
     </section>

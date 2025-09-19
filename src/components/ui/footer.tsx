@@ -59,7 +59,7 @@ const Footer = () => {
             <div className="space-y-4 mb-6">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-brand-red-light" />
-                <span className="text-gray-300">contact@opsecplus.com</span>
+                <a href="mailto:opsecplus@gmail.com" className="text-gray-300 hover:text-white transition-colors">opsecplus@gmail.com</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-brand-red-light" />
@@ -67,7 +67,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-brand-red-light" />
-                <span className="text-gray-300">Saudi Arabia</span>
+                <span className="text-gray-300">Mumbai, India</span>
               </div>
             </div>
             

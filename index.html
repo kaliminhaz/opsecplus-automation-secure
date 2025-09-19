@@ -8,6 +8,8 @@
     <meta name="keywords" content="industrial automation, PLC, cybersecurity, OpenPLC, Raspberry Pi, SCADA, industrial IoT, automation security" />
     <meta name="author" content="OPSEC+" />
     <link rel="canonical" href="https://opsecplus.com" />
+  <!-- Favicon: set to built logo.png via Vite import -->
+  <link rel="icon" href="/favicon.ico" />
 
     <meta property="og:title" content="OPSEC+ | Secure Industrial Automation & PLC Solutions" />
     <meta property="og:description" content="Revolutionary automation with built-in cybersecurity. 80% more affordable than traditional PLCs with enterprise-grade security." />
@@ -19,6 +21,26 @@
     <meta name="twitter:title" content="OPSEC+ | Secure Industrial Automation" />
     <meta name="twitter:description" content="Revolutionary automation with built-in cybersecurity. 80% more affordable than traditional PLCs." />
     <meta name="twitter:image" content="https://opsecplus.com/og-image.jpg" />
+    <!-- Modern, clean typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="module">
+      import logoUrl from '/src/assets/logo.png';
+      import heroUrl from '/src/assets/product-1.png';
+      // Set favicon to logo
+      const link = document.querySelector('link[rel="icon"]') ?? document.createElement('link');
+      link.rel = 'icon';
+      link.type = 'image/png';
+      link.href = logoUrl;
+      if (!link.parentNode) document.head.appendChild(link);
+      // Preload hero image for faster paint
+      const preload = document.createElement('link');
+      preload.rel = 'preload';
+      preload.as = 'image';
+      preload.href = heroUrl;
+      document.head.appendChild(preload);
+    </script>
   </head>
 
   <body>

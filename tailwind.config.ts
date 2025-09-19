@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -63,6 +64,7 @@ export default {
           dark: "hsl(var(--brand-dark))",
           gray: "hsl(var(--brand-gray))",
           green: "hsl(var(--brand-green))",
+          hero: "hsl(var(--brand-hero))",
         },
       },
       borderRadius: {
@@ -114,5 +116,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;

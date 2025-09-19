@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
@@ -14,13 +13,13 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img src={logo} alt="Opsec+" className="h-8 w-8" />
-            <span className="text-xl font-bold text-brand-dark">OPSEC+</span>
+            <span className="text-xl font-bold text-white">OPSEC+</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -29,22 +28,14 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-brand-gray hover:text-brand-red transition-colors duration-200 font-medium"
+                className="text-white/70 hover:text-white transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Sign In
-            </Button>
-            <Button variant="hero" size="sm">
-              Get Started
-            </Button>
-          </div>
+          {/* Desktop CTA removed */}
 
           {/* Mobile Menu Button */}
           <button
@@ -52,35 +43,28 @@ const Navigation = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <X className="w-6 h-6 text-brand-dark" />
+              <X className="w-6 h-6 text-white" />
             ) : (
-              <Menu className="w-6 h-6 text-brand-dark" />
+              <Menu className="w-6 h-6 text-white" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-white/20">
+          <div className="md:hidden py-4 border-t border-white/10 bg-black/30 rounded-b-xl">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-brand-gray hover:text-brand-red transition-colors duration-200 font-medium py-2"
+                  className="text-white/80 hover:text-white transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" size="sm">
-                  Sign In
-                </Button>
-                <Button variant="hero" size="sm">
-                  Get Started
-                </Button>
-              </div>
+              {/* Mobile CTA removed */}
             </div>
           </div>
         )}

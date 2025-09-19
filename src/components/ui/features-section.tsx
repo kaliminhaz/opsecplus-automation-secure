@@ -58,11 +58,11 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-lg transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm animate-slide-up"
+              className="group rounded-2xl border border-white/30 bg-white/70 backdrop-blur-md shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-brand-red/30 animate-slide-up motion-reduce:animate-none"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader className="text-center pb-4">
-                <div className={`mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-background flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                <div className={`mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-red/10 to-brand-red-light/10 ring-1 ring-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <feature.icon className={`w-8 h-8 ${feature.color}`} />
                 </div>
                 <CardTitle className="text-xl font-semibold text-brand-dark">
